@@ -1,0 +1,60 @@
+/*Si queremos darle estilos e ir viendo cambio a cambio
+en la web y usamos XAMPP hay que deshabilitar la caché
+con el F12*/
+
+body {
+	text-align: center;
+	font-family: Amatic SC, cursive;
+	font-size: 30px;
+}
+
+.inicio {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+img {
+	width: 100%;
+}
+
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 0.3em;
+  margin-top: 2em;
+  font-family: 'Caveat', cursive;
+}
+
+a:hover {
+	font-weight: bold;
+	background-color:#27AE60;
+	border-radius: 5px;
+	border: 1px solid;
+	transition:0.7s;
+	color:white;
+	padding-right:3em;
+	padding-left:3em;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*Pie de pagina*/
+
+.footer{
+	margin-top: 2em;
+	color:#f2630d;
+	font-weight: bolder;
+	animation: sun 5s linear infinite alternate;
+	font-size: 40px;
+
+}
+
+@keyframes sun {
+	66% { color: #ff8c00; }
+	50% { color: orange; }
+	33% { color: #ffcc33; }
+
+}
+

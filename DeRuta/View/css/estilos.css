@@ -1,0 +1,475 @@
+/*Si queremos darle estilos e ir viendo cambio a cambio
+en la web y usamos XAMPP hay que deshabilitar la caché
+con el F12*/
+
+/*Reset*/
+
+html {box-sizing: border-box;}
+*, *::before, *::after {box-sizing: inherit;}
+
+body, div, article, section, p, aside, nav, header {
+  margin: 0; padding: 0;
+} 
+
+html {font-size: 1rem;}
+body { line-height: 1.5; }
+
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+ul[class], ol[class], li {
+  margin: 0; padding: 0;
+}
+
+/*Variables*/
+
+root{
+
+	/*Colores*/
+
+	--verde1:  #C6EC95;
+	--verde2: #27AE60;
+	--verde3: forestgreen;
+	--naranja: #F2994A;
+
+
+}
+
+
+/*Estilos generales*/
+
+
+body {
+	text-align: center;
+	color: forestgreen;
+
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+a:link {
+	color:forestgreen;
+}
+
+a:visited {
+	color: forestgreen;
+}
+
+
+/*Estilos de cada formulario*/
+
+.acceso, .registro, .contacto, .ruta, .puntuar {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.acceso > h2, .registro > h2, .contacto > h2, .ruta > h2, .coment{
+	color: white;
+	background-color: #27AE60;
+	border-radius: 0.5em;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+	font-size: 30px;
+	font-family: Amatic SC, cursive;
+}
+
+.coment {
+	width: 50%;
+	margin: 0 auto;
+}
+
+form > div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+input[type="text"], input[type="password"], input[type="email"], 
+input[type="number"], select, textarea{
+	
+	flex: 1 0 50px;
+	/*background: linear-gradient(to bottom, #27AE60, #C6EC95);*/
+	border-radius: 0.5em;
+	font-weight: bolder;
+	color:#27AE60;
+	font-size: 20px;
+	text-align: center;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, 
+input[type="number"]:focus, select:focus, textarea:focus{
+  
+  box-shadow: 0 0 0 5px #eb8447;
+
+}
+
+select {
+	color: black;
+	font-family: Amatic SC, cursive;
+}
+
+input[type="submit"]{
+	background-color:#eb8447;
+	border-radius: 0.5em;
+	color: white;
+	text-transform: uppercase;
+	animation: sun-bgc 5s linear infinite alternate;
+	font-family: Amatic SC, cursive;
+	font-size: 30px;
+
+}
+
+form > div > label {
+	flex: 1 0 50px;
+	font-family: 'Caveat', cursive;
+	font-size: 26px;
+}
+
+.registro > form > a, .acceso > form > a{
+	font-family: 'Caveat', cursive;
+	font-size: 26px;
+}
+
+
+
+
+
+/*Estilos de cada modulo*/
+
+/*Header*/
+
+.menu > ul {
+
+	list-style: none;
+	display: flex;
+	align-items: center;
+
+}
+
+.menu > ul > li {
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	border-radius: 0.5em;
+	background-color: #27AE60;
+	flex-grow: 1;
+	margin-right: 1em;
+
+}
+
+
+.menu > ul > li > a{
+	color: white;
+	font-size: 30px;
+	font-family: Amatic SC, cursive;
+}
+
+a:hover {
+	font-weight: bolder;
+	background-color:#d1fadbb5
+	border-radius: 0.5em;
+	transition:0.7s;
+	color:#28a428;
+	padding-right:5em;
+	padding-left:5em;
+	text-align: center;
+	cursor: pointer;
+	/*box-shadow: 0 0 20px #ffffff;*/
+
+}
+
+/*Buscador de rutas*/
+
+
+#buscador {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	margin-bottom: 3em;
+
+}
+
+#buscador > form > input {
+	background-color: #eb8447;
+	font-family: Amatic SC, cursive;
+	font-size: 25px;
+	color:white;
+}
+
+#buscador > form > input::placeholder { 
+	color: white;
+	text-align: center; 
+}
+
+#resultadoBusqueda {
+	display: flex;
+
+}
+
+.busquedas {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.busquedas > a{
+
+	margin-left: 1em;
+	font-family: 'Caveat', cursive;
+	font-size: 26px;
+}
+
+.busquedas > a:hover{
+
+	background-color:#eb8447;
+	border-radius: 0.5em;
+	color:white;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+
+
+/*Datos ruta*/
+
+.datos {
+	text-align: center;
+	/*border:red 1px solid;*/
+	margin-top: -2em;
+	padding: 1em;
+}
+
+.datos > .info {
+	margin-bottom: 1em;
+}
+
+
+.datos img{
+
+	width: 75%;
+	height: auto;
+	max-width: 100%;
+	margin: auto;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+	border-radius: 0.5em;
+
+}
+
+.datos > .info{
+	display:flex;
+}
+
+.datos > .info > p {
+	width: 25%;
+	font-family: 'Caveat', cursive;
+	font-size: 26px;
+}
+
+.datos > a {
+
+	color:#28a428;
+  	font-size: 1.5em;
+  	font-weight: bold;
+  	cursor: default;
+}
+
+
+.datos > a > h2{
+	color: #F2994A;
+	background-color: #27AE60;
+	border-radius: 0.5em;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+	font-size: 50px;
+	font-family: Amatic SC, cursive;
+	font-weight: bolder;
+
+}
+
+
+
+/*Clima*/
+
+
+.clima > ul {
+	list-style: none;
+	display: flex;
+	justify-content:center;
+}
+
+.clima > ul > li {
+	font-family: 'Caveat', cursive;
+	font-size: 20px;
+	margin-right: 1em;
+}
+
+/*Comentarios*/
+
+.comentarios {
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	background-color:#C6EC95;
+	border-radius: 0.5em;
+	margin-top: 2em;
+	align-content: center;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+	width: 75%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.comentarios > div {
+	display: flex;
+	align-items: center;
+}
+
+.comentarios > div > p{
+	font-family: Amatic SC, cursive;
+	font-size: 20px;
+	color: black;
+}
+
+.comentarios > div:first-child > p:first-child{
+	margin-right: 1em;
+}
+
+.comentarios > div:first-child > p:last-child{
+	font-size: smaller;
+}
+
+.comentarios > div:last-child > p{
+	font-weight: bolder;
+}
+
+
+
+/*Pie de pagina*/
+
+.footer{
+	margin-top: 2em;
+	color:#f2630d;
+	font-weight: bolder;
+	animation: sun 5s linear infinite alternate;
+	font-family: Amatic SC, cursive;
+	font-size: 30px;
+
+}
+
+
+/*Eliminar rutas*/
+
+#eliminar {
+	color: #F2994A;
+	background-color: #27AE60;
+	border-radius: 0.5em;
+	font-size: 30px;
+	font-family: Amatic SC, cursive;
+	width:75%;
+	margin: 0 auto;
+}
+
+.datoseliminar {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+.datoseliminar > div {
+	width:33.33%;
+}
+
+.datoseliminar > div > img{
+	margin: auto;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+	border-radius: 0.5em;
+}
+
+.datoseliminar > div > p {
+	font-family: 'Caveat', cursive;
+	font-size: 20px;
+}
+
+.datoseliminar > div{
+	padding: 1em;
+	margin: 1em;
+}
+
+.datoseliminar > form > input[type="submit"]:hover {
+	cursor: pointer;
+}
+
+
+
+
+/*Animation*/
+
+@keyframes sun {
+	66% { color: #ff8c00; }
+	50% { color: orange; }
+	33% { color: #ffcc33; }
+
+}
+
+@keyframes sun-bgc {
+	66% { background-color: #ff8c00; }
+	50% { background-color: orange; }
+	33% { background-color: #ffcc33; }
+
+}
+
+
+/*Responsive*/
+
+/* MODO TABLET*/
+
+@media (max-width: 650px) {
+
+	.clima > ul {
+		flex-direction: column;
+	}
+
+	.info {
+		flex-direction: column;
+		align-items: center;
+		margin-top: -1em;
+	}
+
+	#buscador {
+		display: block;
+	}
+
+	#resultadoBusqueda {
+		display: block;
+	}
+
+	.busquedas {
+		display: block;
+	}
+
+}
+
+/* MODO MOBILE*/
+
+@media (max-width: 469px) {
+
+	.menu > ul {
+		flex-wrap: wrap;
+	}
+
+	.menu > ul > li{
+		width: 50%;
+		margin-bottom: 0.5em;
+	}
+
+}
+
+
